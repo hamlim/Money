@@ -1,4 +1,5 @@
 import React from 'react';
+import utils from './utils.js';
 
 class Header extends React.Component {
   constructor(props) {
@@ -49,11 +50,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       loggedIn: false,
-      userID = 0,
-      
+      userID = 0
     }
   }
+  componentDidMount() {
+    let request = fetch(''); // fetch user
+  }
   render() {
-
+    <div className="app-wrapper">
+      {this.props.children}
+    </div>
   }
 }
